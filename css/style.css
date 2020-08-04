@@ -10,8 +10,6 @@
     --shadow: #46494C;
     --hover: var(--shadow);
     --radius: 1em;
-    --pagewidth: 70%;
-    --maxwidth: 680px;
 }
 
 h1 { font-size: 3rem; font-weight: bold; }
@@ -56,6 +54,8 @@ button {
 }
 
 .wrapper {
+    color: var(--color);
+    background: var(--background);
 }
 
 .content {
