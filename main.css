@@ -57,7 +57,7 @@ button {
 }
 
 .content {
-    font-family: monospace;
+    font-family: system-ui;
     width: var(--pagewidth);
     max-width: var(--maxwidth);
     display: flex;
@@ -104,7 +104,6 @@ button {
 }
 
 .links {
-    font-family: "Inconsolata", "Roboto Mono", "Consolas", "Courier New", monospace;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
