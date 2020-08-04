@@ -21,6 +21,7 @@ a {
 }
 
 html {
+    font-family: system-ui;
     color: var(--color);
     background: var(--background);
 }
@@ -57,7 +58,6 @@ button {
 }
 
 .content {
-    font-family: system-ui;
     width: var(--pagewidth);
     max-width: var(--maxwidth);
     display: flex;
