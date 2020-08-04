@@ -1,3 +1,9 @@
+@media (max-width: 400px) {
+  .content-wrapper {
+    display: none;
+  }
+}
+
 * {
     box-sizing: border-box;
 }
