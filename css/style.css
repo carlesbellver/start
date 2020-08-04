@@ -26,10 +26,14 @@ a {
     transition: ease-in-out 300ms;
 }
 
-html, body {
-    font-family: system-ui;
+html {
     color: var(--color);
     background: var(--background);
+}
+
+body {
+  margin: 2em 0;
+  font-family: system-ui;
 }
 
 div {
