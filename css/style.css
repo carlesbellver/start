@@ -20,7 +20,7 @@ a {
     transition: ease-in-out 300ms;
 }
 
-html {
+html, body {
     font-family: system-ui;
     color: var(--color);
     background: var(--background);
