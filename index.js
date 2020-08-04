@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   function setTime () {
     const now = new Date()
-    const utcTime = now.toISOString().replace('T', ' ').replace('.', ' ').substr(11, 9) + ' UTC'
+    const utcTime = now.toISOString().replace('T', ' ').replace('.', ' ').substr(11, 5) + ' UTC'
 
-    document.getElementById('current-time').innerHTML = now.toLocaleTimeString()
+    document.getElementById('current-time').innerHTML = now.toLocaleTimeString().substr(0,5)
     document.getElementById('utc-time').innerHTML = utcTime
   }
 
