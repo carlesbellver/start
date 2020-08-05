@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   function setStyle () {
     const now = new Date()
     const h = now.getHours()
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    const days = ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte']
     const w = now.getDay()
     const day = days[w]
     const m = now.getMonth()
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     else period = 0
 
     if (period === 1) {
-      greetings.innerHTML = 'Good morning. It\’s ' + day + '.'
+      greetings.innerHTML = 'Bon dia. És ' + day + '.'
       document.querySelector(':root').style.setProperty('--background', '#DCEDFF')
       document.querySelector(':root').style.setProperty('--input', '#fff')
       document.querySelector(':root').style.setProperty('--link', '#4A5E6D')
@@ -96,14 +96,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
       document.querySelector(':root').style.setProperty('--color', '#232C33')
     }
     if (period === 2) {
-      greetings.innerHTML = 'Good afternoon. It\’s ' + day + '.'
+      greetings.innerHTML = 'Bon dia. És ' + day + '.'
       document.querySelector(':root').style.setProperty('--background', '#97C3B6')
       document.querySelector(':root').style.setProperty('--input', '#F9E7E7')
       document.querySelector(':root').style.setProperty('--color', '#0A2E36')
       document.querySelector(':root').style.setProperty('--shadow', '#0A2E36')
     }
     if (period === 0) {
-      greetings.innerHTML = 'Good evening. It\’s still ' + day + '.'
+      greetings.innerHTML = 'Bona nit. Encara és ' + day + '.'
       document.querySelector(':root').style.setProperty('--background', '#161212')
       document.querySelector(':root').style.setProperty('--input', '#7B6565')
       document.querySelector(':root').style.setProperty('--color', '#F9E7E7')
@@ -120,9 +120,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
   function writeWeather(data) {
     console.log(data)
     const cs = document.querySelector('#cs')
-    cs.innerHTML = 'Castelló: ' + data['cs'][1] + data['cs'][2] + 'º C ' + data['cs'][3] + '/'+ data['cs'][4] +'.'
+    cs.innerHTML = 'Castelló: ' + data['cs'][1] + data['cs'][2] + 'º C ' + data['cs'][3] + '/'+ data['cs'][4] +'º C.'
     const morella = document.querySelector('#morella')
-    morella.innerHTML = 'Morella: ' + + data['morella'][1] + data['morella'][2] + 'º C ' + data['morella'][3] + '/'+ data['morella'][4] +'.'
+    morella.innerHTML = 'Morella: ' + + data['morella'][1] + data['morella'][2] + 'º C ' + data['morella'][3] + '/'+ data['morella'][4] +'º C.'
   }
   
 })
