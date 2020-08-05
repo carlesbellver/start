@@ -124,9 +124,19 @@ document.addEventListener('DOMContentLoaded', function (event) {
   function writeWeather(data) {
     console.log(data)
     const cs = document.querySelector('#cs')
-    cs.innerHTML = 'Castelló ' + data['cs'][2] + 'º C ' + ' ' + data['cs'][1] + ' ' + data['cs'][3] + '/'+ data['cs'][4] +'º C'
+    cs_wicon = data['cs'][0]
+    if (period === 0) {
+      cs_wicon = cs_wicon + 'n'
+    }
+    cs_wicon = cs_wicon + '.png'
+    cs.innerHTML = '<img src="img/climacons/white/' + cs_wicon + '"> Castelló ' + data['cs'][2] + 'º C ' + ' ' + data['cs'][1] + ' ' + data['cs'][3] + '/'+ data['cs'][4] +'º C'
     const morella = document.querySelector('#morella')
-    morella.innerHTML = 'Morella ' + data['morella'][2] + 'º C ' + data['morella'][1] + ' ' + data['morella'][3] + '/'+ data['morella'][4] +'º C'
+    morella_wicon = data['morella'][0]
+    if (period === 0) {
+      morella_wicon = morella_wicon + 'n'
+    }
+    morella_wicon = morella_wicon + '.png'
+    morella.innerHTML = '<img src="img/climacons/white/' + morella_wicon + '"> Morella ' + data['morella'][2] + 'º C ' + data['morella'][1] + ' ' + data['morella'][3] + '/'+ data['morella'][4] +'º C'
   }
   
 })
