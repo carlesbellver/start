@@ -75,6 +75,11 @@ button {
   font-size: 2rem;
 }
 
+.content-greeting p img {
+  width: 20px;
+  height: 20px;
+}
+
 .content-input {
 }
 
