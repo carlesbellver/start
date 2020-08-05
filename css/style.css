@@ -1,9 +1,3 @@
-@media (max-width: 400px) {
-  .content-wrapper {
-    display: none;
-  }
-}
-
 * {
     box-sizing: border-box;
 }
@@ -71,6 +65,14 @@ button {
 }
 
 .content-wrapper {
+}
+
+.content-greeting {
+}
+
+.content-greeting p {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .content-input {
