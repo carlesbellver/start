@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
   setStyle()
+  setWeather()
   setInterval(setTime, 1000)
 
   const button = document.querySelector('.content-input > button')
@@ -110,6 +111,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
       document.querySelector(':root').style.setProperty('--link', '#7B6565')
       document.querySelector(':root').style.setProperty('--hover', '#F9E7E7')
       document.querySelector(':root').style.setProperty('--shadow', '#000')
+    }
+  }
+  
+  function setWeather() {
+    let resp = await fetch('https://carlesbellver.net/oratge.json')
+    if (resp.ok) { // if HTTP-status is 200-299
+      let w = await resp.json();
+      alert(w['cs'][1])
     }
   }
 })
