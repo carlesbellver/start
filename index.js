@@ -1,9 +1,14 @@
 const now = new Date()
-const h = now.getHours()
 const days = ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte']
 const w = now.getDay()
 const day = days[w]
-const m = now.getMonth()
+
+let period = getPeriod()
+
+function getPeriod() {
+
+  const h = now.getHours()
+  const m = now.getMonth()
     
   afternoon = 15
   if (m == 0) {
@@ -58,12 +63,12 @@ const m = now.getMonth()
     morning = 8
     night = 18
   }
-
-  let period
-
-  if (h >= morning && h < afternoon) period = 1
-  else if (h >= afternoon && h < night) period = 2
-  else period = 0
+  
+  if (h >= morning && h < afternoon) p = 1
+  else if (h >= afternoon && h < night) p = 2
+  else p = 0
+  return p
+}
 
 document.addEventListener('DOMContentLoaded', function (event) {
   
@@ -127,19 +132,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
   function writeWeather(data) {
     console.log(data)
     const cs = document.querySelector('#cs')
-    cs_wicon = data['cs'][0]
-    if (period === 0) {
-      cs_wicon = cs_wicon + 'n'
-    }
-    cs_wicon = cs_wicon + '.png'
-    cs.innerHTML = '<img src="img/climacons/white/' + cs_wicon + '"> Castelló ' + data['cs'][2] + 'º C ' + ' ' + data['cs'][1] + ' ' + data['cs'][3] + '/'+ data['cs'][4] +'º C'
+    cs.innerHTML = 'Castelló ' + data['cs'][2] + 'º C ' + ' ' + data['cs'][1] + ' ' + data['cs'][3] + '/'+ data['cs'][4] +'º C'
     const morella = document.querySelector('#morella')
-    morella_wicon = data['morella'][0]
-    if (period === 0) {
-      morella_wicon = morella_wicon + 'n'
-    }
-    morella_wicon = morella_wicon + '.png'
-    morella.innerHTML = '<img src="img/climacons/white/' + morella_wicon + '"> Morella ' + data['morella'][2] + 'º C ' + data['morella'][1] + ' ' + data['morella'][3] + '/'+ data['morella'][4] +'º C'
+    morella.innerHTML = 'Morella ' + data['morella'][2] + 'º C ' + data['morella'][1] + ' ' + data['morella'][3] + '/'+ data['morella'][4] +'º C'
   }
   
 })
