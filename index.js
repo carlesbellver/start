@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
   setStyle()
   setWeather()
 
+  const srch = document.getElementById('search')
+  srch.focus()
+  setTimeout(function () { srch.focus(); }, 1)
+
   const button = document.querySelector('.content-input > button')
 
   button.addEventListener('click', search)
