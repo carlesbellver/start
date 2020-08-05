@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
   
   function writeWeather(data) {
+    console.log(data)
     const cs = document.querySelector('#cs')
     cs.innerHTML = 'Castelló: ' + data['cs'][1] + '.'
     const morella = document.querySelector('#morella')
