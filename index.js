@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     const cs = document.querySelector('#cs')
     cs.innerHTML = 'Castelló: ' + data['cs'][1] + ' ' + data['cs'][2] + 'º C ' + data['cs'][3] + '/'+ data['cs'][4] +'º C.'
     const morella = document.querySelector('#morella')
-    morella.innerHTML = 'Morella: ' + + data['morella'][1] + ' ' + data['morella'][2] + 'º C ' + data['morella'][3] + '/'+ data['morella'][4] +'º C.'
+    morella.innerHTML = 'Morella: ' + data['morella'][1] + ' ' + data['morella'][2] + 'º C ' + data['morella'][3] + '/'+ data['morella'][4] +'º C.'
   }
   
 })
