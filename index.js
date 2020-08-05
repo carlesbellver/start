@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
   
   function setWeather() {
-    fetch('https://carlesbellver.net/oratge.json').then(response => response.json()).then(data => console.log(data));
+    fetch('https://carlesbellver.net/apps/oratge/').then(response => response.json()).then(data => console.log(data));
   }
   
 })
