@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
-  /* setTime() */
-  /* setDate() */
+  setTime()
+  setDate()
   setStyle()
   setInterval(setTime, 1000)
 
