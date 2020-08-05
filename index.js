@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function (event) {
-  setTime()
-  setDate()
   setStyle()
   setInterval(setTime, 1000)
 
@@ -10,19 +8,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
   document.addEventListener('keydown', function (e) {
     if (e.keyCode === 13) search()
   })
-
-  function setTime () {
-    const now = new Date()
-    const utcTime = now.toISOString().replace('T', ' ').replace('.', ' ').substr(11, 5) + ' UTC'
-
-    document.getElementById('current-time').innerHTML = now.toLocaleTimeString().substr(0,5)
-    document.getElementById('utc-time').innerHTML = utcTime
-  }
-
-  function setDate () {
-    const now = new Date()
-    document.getElementById('date').innerHTML = now.toDateString().substr(4)
-  }
 
   function search () {
     const str = document.getElementById('search').value
