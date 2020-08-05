@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-
   afternoon = 15
   if (m == 0) {
     morning = 8
@@ -59,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
   if (h >= morning && h < afternoon) period = 1
   else if (h >= afternoon && h < night) period = 2
   else period = 0
+
+document.addEventListener('DOMContentLoaded', function (event) {
   
   setStyle()
   setWeather()
