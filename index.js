@@ -1,3 +1,10 @@
+const now = new Date()
+const h = now.getHours()
+const days = ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte']
+const w = now.getDay()
+const day = days[w]
+const m = now.getMonth()
+    
   afternoon = 15
   if (m == 0) {
     morning = 8
@@ -83,12 +90,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 
   function setStyle () {
-    const now = new Date()
-    const h = now.getHours()
-    const days = ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte']
-    const w = now.getDay()
-    const day = days[w]
-    const m = now.getMonth()
     
     const greetings = document.querySelector('.content-greeting > h1')
 
