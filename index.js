@@ -115,10 +115,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
   
   function setWeather() {
-    let resp = await fetch('https://carlesbellver.net/oratge.json');
-    if (resp.ok) { // if HTTP-status is 200-299
-      let w = await resp.json();
-      alert(w['cs'][1])
-    }
+    fetch('https://carlesbellver.net/oratge.json').then(response => response.json()).then(data => console.log(data));
   }
+  
 })
