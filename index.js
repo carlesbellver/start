@@ -1,4 +1,65 @@
 document.addEventListener('DOMContentLoaded', function (event) {
+
+  afternoon = 15
+  if (m == 0) {
+    morning = 8
+    night = 18
+  }
+  else if (m == 1) {
+    morning = 8
+    night = 18
+  }
+  else if (m == 2) {
+    morning = 7
+    night = 19
+  }
+  else if (m == 3) {
+    morning = 7
+    night = 20
+  }
+  else if (m == 4) {
+    morning = 7
+    night = 21
+  }
+  else if (m == 5) {
+    morning = 6
+    night = 21
+  }
+  else if (m == 6) {
+    morning = 6
+    night = 21
+  }
+  else if (m == 7) {
+    morning = 7
+    night = 21
+  }
+  else if (m == 8) {
+    morning = 7
+    night = 20
+  }
+  else if (m == 9) {
+    morning = 8
+    night = 19
+  }
+  else if (m == 10) {
+    morning = 8
+    night = 18
+  }
+  else if (m == 11) {
+    morning = 8
+    night = 18
+  }
+  else if (m == 1) {
+    morning = 8
+    night = 18
+  }
+
+  let period
+
+  if (h >= morning && h < afternoon) period = 1
+  else if (h >= afternoon && h < night) period = 2
+  else period = 0
+  
   setStyle()
   setWeather()
 
@@ -29,67 +90,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     const day = days[w]
     const m = now.getMonth()
     
-    afternoon = 15
-    if (m == 0) {
-      morning = 8
-      night = 18
-    }
-    else if (m == 1) {
-      morning = 8
-      night = 18
-    }
-    else if (m == 2) {
-      morning = 7
-      night = 19
-    }
-    else if (m == 3) {
-      morning = 7
-      night = 20
-    }
-    else if (m == 4) {
-      morning = 7
-      night = 21
-    }
-    else if (m == 5) {
-      morning = 6
-      night = 21
-    }
-    else if (m == 6) {
-      morning = 6
-      night = 21
-    }
-    else if (m == 7) {
-      morning = 7
-      night = 21
-    }
-    else if (m == 8) {
-      morning = 7
-      night = 20
-    }
-    else if (m == 9) {
-      morning = 8
-      night = 19
-    }
-    else if (m == 10) {
-      morning = 8
-      night = 18
-    }
-    else if (m == 11) {
-      morning = 8
-      night = 18
-    }
-    else if (m == 1) {
-      morning = 8
-      night = 18
-    }
-
     const greetings = document.querySelector('.content-greeting > h1')
 
-    let period
-
-    if (h >= morning && h < afternoon) period = 1
-    else if (h >= afternoon && h < night) period = 2
-    else period = 0
 
     if (period === 1) {
       greetings.innerHTML = 'Bon dia. És ' + day + '.'
