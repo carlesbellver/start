@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
   setStyle()
   setWeather()
-  setInterval(setTime, 1000)
 
   const button = document.querySelector('.content-input > button')
 
