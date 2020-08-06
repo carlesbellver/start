@@ -31,7 +31,7 @@ html {
 
 body {
   margin: 2em 0;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+  font-family: system-ui, Roboto, sans-serif;
 }
 
 div {
