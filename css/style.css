@@ -13,10 +13,10 @@
 }
 
 h1 { font-size: 3rem; font-weight: bold; }
-h2 { font-size: 2.5rem; font-weight: bold; }
-h3 { font-size: 2rem; font-weight: bold; }
-h4 { font-size: 1.5rem; font-weight: bold; }
-h5 { font-size: 1.25rem; font-weight: bold; }
+h2 { font-size: 2rem; font-weight: bold; }
+h3 { font-size: 1.5rem; font-weight: bold; }
+h4 { font-size: 1.25rem; font-weight: bold; }
+h5 { font-size: 1.1rem; font-weight: bold; }
 
 a {
     text-decoration: none;
@@ -68,16 +68,6 @@ button {
 }
 
 .content-greeting {
-}
-
-.content-greeting p {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.content-greeting p img {
-  width: 40px;
-  height: 40px;
 }
 
 .content-input {
