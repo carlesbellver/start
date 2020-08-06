@@ -132,9 +132,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
   function writeWeather(data) {
     console.log(data)
     const cs = document.querySelector('#cs')
-    cs.innerHTML = 'Castelló ' + data['cs'][2] + ' ºC ' + ' ' + data['cs'][1] + ' ' + data['cs'][3] + '/'+ data['cs'][4] +' ºC'
+    cs.innerHTML = 'Castelló ' + data['cs']['description'] + ' ºC ' + ' ' + data['cs']['temp'] + ' ' + data['cs']['min'] + '/'+ data['cs']['max'] +' ºC'
     const morella = document.querySelector('#morella')
-    morella.innerHTML = 'Morella ' + data['morella'][2] + ' ºC ' + data['morella'][1] + ' ' + data['morella'][3] + '/'+ data['morella'][4] +' ºC'
+    morella.innerHTML = 'Morella ' + data['morella']['description'] + ' ºC ' + data['morella']['temp'] + ' ' + data['morella']['min'] + '/'+ data['morella']['max'] +' ºC'
   }
   
 })
