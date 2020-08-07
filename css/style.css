@@ -99,6 +99,7 @@ button {
 }
 
 .links {
+    text-transform: lowercase;
 }
 
 .links .menu-block {
