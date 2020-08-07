@@ -10,7 +10,7 @@ function getPeriod() {
   const h = now.getHours()
   const m = now.getMonth()
     
-  afternoon = 15
+  afternoon = 13
   if (m == 0) {
     morning = 8
     night = 18
@@ -66,6 +66,7 @@ function getPeriod() {
   
   if (h >= morning && h < afternoon) p = 1
   else if (h >= afternoon && h < night) p = 2
+  else if (h <= 23) p = 3
   else p = 0
   return p
 }
@@ -108,14 +109,23 @@ document.addEventListener('DOMContentLoaded', function (event) {
       document.querySelector(':root').style.setProperty('--color', '#232C33')
     }
     if (period === 2) {
-      greetings.innerHTML = 'Bon dia. És ' + day + '.'
+      greetings.innerHTML = 'Hola. És ' + day + '.'
       document.querySelector(':root').style.setProperty('--background', '#97C3B6')
       document.querySelector(':root').style.setProperty('--input', '#F9E7E7')
       document.querySelector(':root').style.setProperty('--color', '#0A2E36')
       document.querySelector(':root').style.setProperty('--shadow', '#0A2E36')
     }
-    if (period === 0) {
+    if (period === 3) {
       greetings.innerHTML = 'Bona nit. Encara és ' + day + '.'
+      document.querySelector(':root').style.setProperty('--background', '#161212')
+      document.querySelector(':root').style.setProperty('--input', '#7B6565')
+      document.querySelector(':root').style.setProperty('--color', '#F9E7E7')
+      document.querySelector(':root').style.setProperty('--link', '#7B6565')
+      document.querySelector(':root').style.setProperty('--hover', '#F9E7E7')
+      document.querySelector(':root').style.setProperty('--shadow', '#000')
+    }
+    if (period === 0) {
+      greetings.innerHTML = 'Bona nit. Ja és ' + day + '.'
       document.querySelector(':root').style.setProperty('--background', '#161212')
       document.querySelector(':root').style.setProperty('--input', '#7B6565')
       document.querySelector(':root').style.setProperty('--color', '#F9E7E7')
