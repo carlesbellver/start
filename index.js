@@ -59,10 +59,6 @@ function getPeriod() {
     morning = 8
     night = 18
   }
-  else if (m == 1) {
-    morning = 8
-    night = 18
-  }
   
   if (h >= morning && h < afternoon) p = 1
   else if (h >= afternoon && h < night) p = 2
