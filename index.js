@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     else if (h <= 23) period = 3
     else period = 0
 
+    document.getElementById('dt').innerHTML = now.toLocaleTimeString()
+
     const greetings = document.querySelector('.content-greeting > h1')
 
     if (period === 1) {
