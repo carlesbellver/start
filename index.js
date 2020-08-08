@@ -70,7 +70,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
       document.querySelector(':root').style.setProperty('--shadow', '#000')
     }
     if (period === 0) {
-      greetings.innerHTML = 'Bona nit. Ja és ' + day + '.'
+      if (h < 5) {
+        greetings.innerHTML = 'Bona nit. Ja és ' + day + '.'
+      }
+      else {
+        greetings.innerHTML = 'Bon dia. Ja és ' + day + '.'
+      }
       document.querySelector(':root').style.setProperty('--background', '#161212')
       document.querySelector(':root').style.setProperty('--input', '#7B6565')
       document.querySelector(':root').style.setProperty('--color', '#F9E7E7')
