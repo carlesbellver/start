@@ -1,76 +1,9 @@
-const now = new Date()
-const days = ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte']
-const w = now.getDay()
-const day = days[w]
-
-let period = getPeriod()
-
-function getPeriod() {
-
-  const h = now.getHours()
-  const m = now.getMonth()
-    
-  afternoon = 13
-  if (m == 0) {
-    morning = 8
-    night = 18
-  }
-  else if (m == 1) {
-    morning = 8
-    night = 18
-  }
-  else if (m == 2) {
-    morning = 7
-    night = 19
-  }
-  else if (m == 3) {
-    morning = 7
-    night = 20
-  }
-  else if (m == 4) {
-    morning = 7
-    night = 21
-  }
-  else if (m == 5) {
-    morning = 6
-    night = 21
-  }
-  else if (m == 6) {
-    morning = 6
-    night = 21
-  }
-  else if (m == 7) {
-    morning = 7
-    night = 21
-  }
-  else if (m == 8) {
-    morning = 7
-    night = 20
-  }
-  else if (m == 9) {
-    morning = 8
-    night = 19
-  }
-  else if (m == 10) {
-    morning = 8
-    night = 18
-  }
-  else if (m == 11) {
-    morning = 8
-    night = 18
-  }
-  
-  if (h >= morning && h < afternoon) p = 1
-  else if (h >= afternoon && h < night) p = 2
-  else if (h <= 23) p = 3
-  else p = 0
-  return p
-}
-
 document.addEventListener('DOMContentLoaded', function (event) {
   
   setStyle()
   setWeather()
+  setInterval(setStyle, 3600000) // an hour
+  setInterval(setWeather, 3600000) // an hour
 
   const srch = document.getElementById('search')
   srch.focus()
@@ -93,8 +26,24 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   function setStyle () {
     
-    const greetings = document.querySelector('.content-greeting > h1')
+    const days = ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte']
+    const daylight = {
+      "morning": [  8,  8,  7,  7,  7,  6,  6,  7,  7,  8,  8,  8],
+      "night":   [ 18, 18, 19, 20, 21, 21, 21, 21, 20, 19, 18, 18]
+    }
+    const afternoon = 13
+    const now = new Date()
+    const w = now.getDay()
+    const day = days[w]
+    const h = now.getHours()
+    const m = now.getMonth()
+    let period
+    if (h >= daylight['morning'][m] && h < afternoon) period = 1
+    else if (h >= afternoon && h < daylight['night'][m]) period = 2
+    else if (h <= 23) period = 3
+    else period = 0
 
+    const greetings = document.querySelector('.content-greeting > h1')
 
     if (period === 1) {
       greetings.innerHTML = 'Bon dia. És ' + day + '.'
