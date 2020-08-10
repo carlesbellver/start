@@ -37,10 +37,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
     const day = days[w]
     const h = now.getHours()
     const m = now.getMonth()
+
     let period
     if (h >= daylight['morning'][m] && h < afternoon) period = 1
     else if (h >= afternoon && h < daylight['night'][m]) period = 2
-    else if (h <= 23) period = 3
+    else if (h >= daylight['night'][m] && h <= 23) period = 3
     else period = 0
 
     const greetings = document.querySelector('.content-greeting > h1')
