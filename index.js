@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     const afternoon = 13
     const now = new Date()
     const w = now.getDay()
-    const day = days[w]
+    var day = days[w]
     const d = now.getDate();
     day = day + ' ' + d
     const m = now.getMonth()
