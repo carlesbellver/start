@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   function setStyle () {
     
+    const months = ['gener', 'febrer', 'març', 'abril', 'maig', 'juny', 'juliol', 'agost', 'setembre', 'octubre', 'novembre', 'desembre']
     const days = ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte']
     const daylight = {
       "morning": [  8,  8,  7,  7,  7,  6,  6,  7,  7,  8,  8,  8],
@@ -35,8 +36,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
     const now = new Date()
     const w = now.getDay()
     const day = days[w]
-    const h = now.getHours()
+    const d = now.getDate();
+    day = day + ' ' + d
     const m = now.getMonth()
+    if (months[m].match(/^[aeiou]/)) {
+      day = day + ' d\'' + months[m]
+    }
+    else {
+      day = day + ' de ' + montsh[m]
+    }
+    const h = now.getHours()
 
     let period
     if (h >= daylight['morning'][m] && h < afternoon) period = 1
