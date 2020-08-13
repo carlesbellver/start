@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     day = day + ' ' + d
     const m = now.getMonth()
     if (months[m].match(/^[aeiou]/)) {
-      day = day + ' d\'' + months[m]
+      day = day + ' d’' + months[m]
     }
     else {
       day = day + ' de ' + montsh[m]
