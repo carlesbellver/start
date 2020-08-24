@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
       morella.innerHTML = data['morella']['emoji'] + ' Morella ' + data['morella']['temp'] + ' ºC ' + data['morella']['description'] + ' ' + data['morella']['min'] + '/'+ data['morella']['max'] +' ºC'
     }
     else {
-      cs.innerHTML = 'sense dades'
-      morella.innerHTML = 'sense dades'
+      cs.innerHTML = 'Castelló: sense dades'
+      morella.innerHTML = 'Morella: sense dades'
     }
   }
   
