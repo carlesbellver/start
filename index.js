@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
   
   function setWeather() {
-    fetch('https://carlesbellver.net/apps/oratge/').then(response => response.json()).then(function(data) { writeWeather(data) } );
+    fetch('https://carlesbellver.net/apps/oratge/alt/').then(response => response.json()).then(function(data) { writeWeather(data) } );
   }
   
   function writeWeather(data) {
@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
    const morella = document.querySelector('#morella')
     var currentTS = Math.floor(Date.now() / 1000);
     if (currentTS - data['ts'] <= 7200) {
-      cs.innerHTML = data['cs']['emoji'] + ' Castelló ' + data['cs']['temp'] + ' ºC ' + ' ' + data['cs']['description'] + ' ' + data['cs']['min'] + '/'+ data['cs']['max'] +' ºC'
-      morella.innerHTML = data['morella']['emoji'] + ' Morella ' + data['morella']['temp'] + ' ºC ' + data['morella']['description'] + ' ' + data['morella']['min'] + '/'+ data['morella']['max'] +' ºC'
+      cs.innerHTML = data['cs']['emoji'] + ' Castelló ' + data['cs']['temp'] + ' ºC ' + ' ' + data['cs']['sky'] + ' ' + data['cs']['min'] + '/'+ data['cs']['max'] +' ºC'
+      morella.innerHTML = data['morella']['emoji'] + ' Morella ' + data['morella']['temp'] + ' ºC ' + data['morella']['sky'] + ' ' + data['morella']['min'] + '/'+ data['morella']['max'] +' ºC'
     }
     else {
       cs.innerHTML = 'Castelló: sense dades'
