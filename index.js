@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       day = day + ' d’' + months[m]
     }
     else {
-      day = day + ' de ' + montsh[m]
+      day = day + ' de ' + months[m]
     }
     const h = now.getHours()
 
